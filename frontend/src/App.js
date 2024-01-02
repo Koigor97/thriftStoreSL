@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -8,7 +10,7 @@ function App() {
       <>
         <Header />
         <Main>
-          <h1>Welcome to ThriftStoreSL</h1>
+          <Outlet />
         </Main>
         <Footer />
       </>
