@@ -9,8 +9,9 @@ function HomeScreen() {
 
   useEffect(function () {
     const fetchProducts = async function () {
-      const { data } = await axios.get("/api/products");
-      setProducts(data);
+      const { data } = await axios.get("http://localhost:4000/api/products");
+      // console.log(data.data);
+      setProducts(data.data);
     };
 
     fetchProducts();
@@ -18,7 +19,7 @@ function HomeScreen() {
 
   return (
     <>
-      <h1>Latest Products</h1>
+      <h1>Recent products</h1>
       <Row>
         {products.map((product) => (
           <Col sm={12} md={6} lg={4} xl={3}>
