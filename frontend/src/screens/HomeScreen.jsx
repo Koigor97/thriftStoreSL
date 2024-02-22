@@ -21,7 +21,7 @@ function HomeScreen() {
       <h1>Recent products</h1>
       <Row>
         {products.map((product) => (
-          <Col sm={12} md={6} lg={4} xl={3}>
+          <Col sm={12} md={6} lg={4} xl={3} key={product.key}>
             <Product product={product} key={product._id} />
           </Col>
         ))}
